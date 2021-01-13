@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root{
+  --bg-dark: #212121;
+  --bg-darkLight: #2b2d33;
+}
+/*------------ pre defined------------ */
+.Bg-Dark{
+  background: #23282c;
+}
+.Bg-LightDark{
+  background: #2f353a;
+}
+.div-box-shadow{
+  box-shadow: 0 1px 1px 0 rgba(60,75,100,.14), 0 2px 1px -1px rgba(60,75,100,.12), 0 1px 3px 0 rgba(60,75,100,.2);
+}
+/*------------ pre defined------------ */
+
+
+.mainCenterBar{
+  background-color: #ebedef;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  /* min-width: 0; */
+  min-height: 100vh;
+}
+.mainCenterBar .main{
+  flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+}
+.navbar{
+  box-shadow: 0 2px 2px 0 rgba(60,75,100,.14), 0 3px 1px -2px rgba(60,75,100,.12), 0 1px 5px 0 rgba(60,75,100,.2);
+}
+.brandName{
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  color: white;
+  background: #1f2429;
+  text-align: center;
+}
+
+
+/* ===================================sidebar=========================================== */
+.sidebar-show{    
+  margin-left: 0;
+}
+.sidebarLeft{
+  width: 220px;
+  background: #2b333a;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1030;
+  transition:  .3s;
+  color: white;
+}
+#sidebarLeft.sidebar-show.toggleNav{
+  margin-left: -220px !important;
+}
+/* ============================================================================== */
+
+
+
+.mainCenterBar{
+    margin-left: 220px;
+    width: 100%;
+    transition:  .3s;
+} 
+.sidebarLeft.toggleNav~.mainCenterBar{
+    margin-left: 0px ;
+}
+.sidebarNav .nav-item .nav-link{
+  color: white;
+}
+
+footer{
+    align-items: center;
+    padding: 10px;
+    color: #23282c;
+    background: #f0f3f5;
+    border-top: 1px solid #c8ced3;
+}
+
+.activeDot{
+  color: green;
+  font-size: 20px;
+}
+.inActiveDot{
+  color: red;
+  font-size: 20px;
+}
